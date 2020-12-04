@@ -8,8 +8,8 @@
   }],
    "blocked":[],
   "free":[
-    {"id":0, "file":0, "city":"Japan","country":"Japan1","image":"japan","ip":"bne1.gpvpn.com","active":"true","signal":"a"},
-    {"id":1, "file":1, "city":"Japan","country":"Japan2","image":"japan","ip":"mel3.gpvpn.com","active":"true","signal":"b"}
+    {"id":0, "file":0, "city":"Japan","country":"Japan1","image":"japan","ip":"219.100.37.89","active":"true","signal":"a"},
+    {"id":1, "file":1, "city":"Japan","country":"Japan2","image":"japan","ip":"219.100.37.16","active":"true","signal":"b"}
 
   ]
 }
