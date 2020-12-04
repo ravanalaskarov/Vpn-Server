@@ -1,20 +1,6 @@
 {
   "ovpn_file":[
-    {"id":0,"file":"    
-#viscosity name Ghost Path VPN > Australia - Brisbane
-#viscosity ManageAdapter True
-#viscosity startonopen false
-
-# host/port of vpn server
-remote bne1.gpvpn.com 443 udp
-
-# prompt for authentication
-auth-user-pass
-
-# redirect all outgoing traffic to the vpn gateway
-redirect-gateway
-
-dev tun
+    {"id":0,"file":"dev tun
 tls-client
 persist-tun
 persist-key
@@ -46,21 +32,10 @@ JWIrKnFXzlHOvKlyLkcZn15gwKQ=
 -----END CERTIFICATE-----
 </ca>
 "},
-    {"id":1,"file":"
+    {"id":1,"file":"client
 
-# host/port of vpn server
-remote mel3.gpvpn.com 443 udp
-
-# prompt for authentication
-auth-user-pass
-
-# equivalent to pull, tls-client
-client
-
-# redirect all outgoing traffic to the vpn gateway
 redirect-gateway
 
-# verify the server certificate for authenticity
 remote-cert-tls server
 
 cipher AES-256-CBC
@@ -73,8 +48,6 @@ nobind
 persist-key
 persist-tun
 
-# ssl certificate / key used for tls
-#ca certs/ca.crt
 
 <ca>
 -----BEGIN CERTIFICATE-----
