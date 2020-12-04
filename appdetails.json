@@ -6,6 +6,7 @@
     "description":"The App is available at github.com/gayankuruppu/android-vpn-client-ics-openvpn and follow the developer on GitHub github.com/gayanvoice",
     "size":"https://git.io/JeY69"
   }],
+   "blocked":[],
   "free":[
     {"id":0, "file":0, "city":"Japan","country":"Japan1","image":"japan","ip":"bne1.gpvpn.com","active":"true","signal":"a"},
     {"id":1, "file":1, "city":"Japan","country":"Japan2","image":"japan","ip":"mel3.gpvpn.com","active":"true","signal":"b"}
