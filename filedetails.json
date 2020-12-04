@@ -1,6 +1,29 @@
 {
   "ovpn_file":[
-    {"id":0,"file":"<ca>
+    {"id":0,"file":"    
+#viscosity name Ghost Path VPN > Australia - Brisbane
+#viscosity ManageAdapter True
+#viscosity startonopen false
+
+# host/port of vpn server
+remote bne1.gpvpn.com 443 udp
+
+# prompt for authentication
+auth-user-pass
+
+# redirect all outgoing traffic to the vpn gateway
+redirect-gateway
+
+dev tun
+tls-client
+persist-tun
+persist-key
+#comp-lzo
+nobind
+pull
+cipher AES-256-CBC
+
+<ca>
 -----BEGIN CERTIFICATE-----
 MIIDQDCCAqmgAwIBAgIJAM8Brk2pUr0KMA0GCSqGSIb3DQEBBQUAMHQxCzAJBgNV
 BAYTAlVTMQswCQYDVQQIEwJDQTEMMAoGA1UEBxMDVlBOMQwwCgYDVQQKEwNWUE4x
@@ -21,8 +44,39 @@ IDHCCxBMdny+3sKAOllmH4+51j2aWhAJ4Pyc/yBTYyQGNoriABjmNzp+R05oiaxA
 D3vTgR80juKDPtQb8LoGLBF18gL7Vtc3+hJXcJasXZaDSSoyh5f+TtGvytIT+ece
 JWIrKnFXzlHOvKlyLkcZn15gwKQ=
 -----END CERTIFICATE-----
-</ca>"},
-    {"id":1,"file":"<ca>
+</ca>
+"},
+    {"id":1,"file":"
+
+# host/port of vpn server
+remote mel3.gpvpn.com 443 udp
+
+# prompt for authentication
+auth-user-pass
+
+# equivalent to pull, tls-client
+client
+
+# redirect all outgoing traffic to the vpn gateway
+redirect-gateway
+
+# verify the server certificate for authenticity
+remote-cert-tls server
+
+cipher AES-256-CBC
+
+proto udp
+dev tun
+keepalive 10 120
+nobind
+
+persist-key
+persist-tun
+
+# ssl certificate / key used for tls
+#ca certs/ca.crt
+
+<ca>
 -----BEGIN CERTIFICATE-----
 MIIDQDCCAqmgAwIBAgIJAM8Brk2pUr0KMA0GCSqGSIb3DQEBBQUAMHQxCzAJBgNV
 BAYTAlVTMQswCQYDVQQIEwJDQTEMMAoGA1UEBxMDVlBOMQwwCgYDVQQKEwNWUE4x
@@ -43,5 +97,6 @@ IDHCCxBMdny+3sKAOllmH4+51j2aWhAJ4Pyc/yBTYyQGNoriABjmNzp+R05oiaxA
 D3vTgR80juKDPtQb8LoGLBF18gL7Vtc3+hJXcJasXZaDSSoyh5f+TtGvytIT+ece
 JWIrKnFXzlHOvKlyLkcZn15gwKQ=
 -----END CERTIFICATE-----
-</ca>"}]
+</ca>
+"}]
 }
